@@ -16,8 +16,12 @@ window.geometry("500x500")
 window.title("Ежедневные задания")
 
 # Добавление метки заголовка
-lblTitle = tk.Label(text = "Ежедневные задания. Отметка о выполнении", font = ('Helvetica', 16, 'bold'), fg = '#3333FF')
-lblTitle.place(x=70, y=44)
+lblTitle = tk.Label(text = "Ежедневные задания", font = ('Helvetica', 16, 'bold'), fg = '#3333FF')
+lblTitle.place(x=120, y=32)
+
+# Добавление метки подзаголовка
+lblTitle = tk.Label(text = "Отметка о выполнении", font = ('Helvetica', 12, 'bold'), fg = '#3333FF')
+lblTitle.place(x=140, y=67)
 
 # Добавление кнопки и метки для задания 1
 btnChart1 = tk.Button(window, text="Задание 1", font = ('Helvetica', 10, 'bold'))#, command=chart1.plot_chart)
