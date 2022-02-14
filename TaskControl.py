@@ -24,14 +24,14 @@ lblTitle = tk.Label(text = "Отметка о выполнении", font = ('He
 lblTitle.place(x=140, y=67)
 
 # Добавление кнопки и метки для задания 1
-btnChart1 = tk.Button(window, text="Задание 1", font = ('Helvetica', 10, 'bold'))#, command=chart1.plot_chart)
+btnChart1 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'))#, command=chart1.plot_chart)
 btnChart1.place(x=35, y=122, width=90, height=30)
 
 lblChart1 = tk.Label(text="Наполнение цветными энергиями", font = ('Helvetica', 10))
 lblChart1.place(x=153, y=127)
 
 # Добавление кнопки и метки для задания 2
-btnChart2 = tk.Button(window, text="Задание 2", font = ('Helvetica', 10, 'bold'))#, command=chart2.plot_chart)
+btnChart2 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'))#, command=chart2.plot_chart)
 btnChart2.place(x=35, y=186, width=90, height=30)
 
 lblChart1 = tk.Label(text="Просмотр ТВ не более часа", font = ('Helvetica', 10))
