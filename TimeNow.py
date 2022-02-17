@@ -25,11 +25,11 @@ def my_pandas_csv(month,day):
         if df.iat[i,0] == month:
             if df.iat[i,1] == day:
                 df.iat[i,2] = 1
-            
-        
+                row_now = i
+    
     
           
-    #df.iat[i,2] = 0
+    print(df.loc[row_now])
        
     # Load Сохранить файл #
     df.to_csv('3MonthPeriod.csv',sep=';',encoding='utf-8',index=False)
