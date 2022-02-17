@@ -1,9 +1,11 @@
 # 5.2 Построение графиков в Python
 
 import tkinter as tk
+from datetime import datetime
+import  pandas as pd
 
 # Импорт внешних файлов
-#import chart1
+import TaskDone
 #import chart2
 
 # Функция закрытия окна
@@ -24,7 +26,8 @@ lblTitle = tk.Label(text = "Отметка о выполнении", font = ('He
 lblTitle.place(x=140, y=67)
 
 # Добавление кнопки и метки для задания 1
-btnChart1 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'))#, command=chart1.plot_chart)
+btnChart1 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'), command=TaskDone.my_pandas_csv)
+
 btnChart1.place(x=35, y=122, width=90, height=30)
 
 lblChart1 = tk.Label(text="Наполнение цветными энергиями", font = ('Helvetica', 10))

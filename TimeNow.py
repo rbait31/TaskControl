@@ -4,11 +4,10 @@ import  pandas as pd
 
 from datetime import datetime
 
+# Текущий месяц и день
 current_datetime = datetime.now()
-
 month = current_datetime.month
 day= current_datetime.day
-
 
 
 # Обработка csv файла при помощи pandas #
