@@ -28,7 +28,7 @@ def my_pandas_csv(month,day):
                 row_now = i
     
     
-          
+    # Печать строки текущего дня          
     print(df.loc[row_now])
        
     # Load Сохранить файл #
