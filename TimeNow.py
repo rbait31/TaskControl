@@ -7,13 +7,16 @@ from datetime import datetime
 # Текущий месяц и день
 current_datetime = datetime.now()
 month = current_datetime.month
-day= current_datetime.day
+day = current_datetime.day
+# Столбец 2 - энергетическое ; Столбец 3 - энергетика стихии огня 
+column = 3
 
 
 # Обработка csv файла при помощи pandas #
-def my_pandas_csv(month,day):
+def my_pandas_csv(month,day,column):
     print("Месяц", month)
     print("День",day)
+    
     # Extract #
     df = pd.read_csv('3MonthPeriod.csv',sep=';')
     print(df)
@@ -23,7 +26,7 @@ def my_pandas_csv(month,day):
     for i in range(cnt):
         if df.iat[i,0] == month:
             if df.iat[i,1] == day:
-                df.iat[i,2] = 1
+                df.iat[i,column] = 1
                 row_now = i
     
     
@@ -37,7 +40,7 @@ def my_pandas_csv(month,day):
 def main():
     #my_text()
       
-    my_pandas_csv(month,day)
+    my_pandas_csv(month,day,column)
     return 0
 if __name__ == '__main__':
     main()
