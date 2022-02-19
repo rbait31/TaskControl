@@ -1,11 +1,13 @@
 import  pandas as pd
 from datetime import datetime
 
+
 # Обработка csv файла при помощи pandas #
-def my_pandas_csv():
-   
-    # Текущий месяц и день
+def taskdone():
+    # Отметка о выполнении 2-го задания
+    column_task = 3
     
+    # Текущий месяц и день
     current_datetime = datetime.now()
     month = current_datetime.month
     day= current_datetime.day
@@ -18,8 +20,14 @@ def my_pandas_csv():
     for i in range(cnt):
         if df.iat[i,0] == month:
             if df.iat[i,1] == day:
-                df.iat[i,2] = 1
+                df.iat[i,column_task] = 1
                 
        # Load Сохранить файл #
-    df.to_csv('3MonthPeriod.csv',sep=';',encoding='utf-8',index=False) 
+    df.to_csv('3MonthPeriod.csv',sep=';',encoding='utf-8',index=False)
 
+# Точка входа в программу
+def main():
+    taskdone()
+    return 0
+if __name__ == '__main__':
+    main()

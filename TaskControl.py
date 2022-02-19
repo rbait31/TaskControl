@@ -5,8 +5,9 @@ from datetime import datetime
 import  pandas as pd
 
 # Импорт внешних файлов
-import TaskDone
-#import chart2
+#import taskdone1
+#import taskdone2
+import taskdontest
 
 # Функция закрытия окна
 def do_close():
@@ -17,6 +18,12 @@ window = tk.Tk()
 window.geometry("500x500")
 window.title("Ежедневные задания")
 
+def taskdone1():
+  taskdontest.taskdone(2)
+  
+def taskdone2():
+  taskdontest.taskdone(3)
+
 # Добавление метки заголовка
 lblTitle = tk.Label(text = "Ежедневные задания", font = ('Helvetica', 16, 'bold'), fg = '#3333FF')
 lblTitle.place(x=120, y=32)
@@ -26,7 +33,7 @@ lblTitle = tk.Label(text = "Отметка о выполнении", font = ('He
 lblTitle.place(x=140, y=67)
 
 # Добавление кнопки и метки для задания 1
-btnChart1 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'), command=TaskDone.my_pandas_csv(2))
+btnChart1 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'), command=taskdone1)
 
 btnChart1.place(x=35, y=122, width=90, height=30)
 
@@ -34,7 +41,7 @@ lblChart1 = tk.Label(text="Наполнение цветными энергия�
 lblChart1.place(x=153, y=127)
 
 # Добавление кнопки и метки для задания 2
-btnChart2 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'), command=TaskDone.my_pandas_csv(3))
+btnChart2 = tk.Button(window, text="Выполнил", font = ('Helvetica', 10, 'bold'), command=taskdone2)
 
 btnChart2.place(x=35, y=186, width=90, height=30)
 
